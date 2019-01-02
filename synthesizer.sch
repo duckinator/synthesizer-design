@@ -243,8 +243,6 @@ F 3 "" H 3700 3700 50  0001 C CNN
 	1    3700 3700
 	-1   0    0    1   
 $EndComp
-Text Notes 900  700  0    60   ~ 0
-TODO: Determine if timbre-oscillator #1 (pins 1, 2) and timbre-oscillator #2 (pins 13, 12) should have a square/triangle wave selector switch.
 Text GLabel 1700 1200 0    60   Input ~ 0
 Timbre1VarResA
 Text GLabel 1700 1600 0    60   Input ~ 0
@@ -265,6 +263,72 @@ Text GLabel 1000 3700 0    60   Input ~ 0
 Osc1Out
 Text GLabel 4000 3700 2    60   Input ~ 0
 Osc2Out
+$Comp
+L 4017 U?
+U 1 1 5C2CD972
+P 5050 4650
+F 0 "U?" H 4950 4500 50  0000 C CNN
+F 1 "4017" H 4950 4350 50  0000 C CNN
+F 2 "" H 5050 4650 60  0001 C CNN
+F 3 "" H 5050 4650 60  0001 C CNN
+	1    5050 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 40106 U?
+U 4 1 5C2D0466
+P 2900 4800
+F 0 "U?" H 3000 4950 50  0000 L CNN
+F 1 "40106" H 2950 4650 50  0000 L CNN
+F 2 "" H 2900 4800 60  0001 C CNN
+F 3 "" H 2900 4800 60  0001 C CNN
+	4    2900 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L R_Variable R?
+U 1 1 5C2D157A
+P 3400 4750
+F 0 "R?" V 3500 4650 50  0000 L CNN
+F 1 "R_Variable" V 3300 4700 50  0000 L CNN
+F 2 "" V 3330 4750 50  0001 C CNN
+F 3 "" H 3400 4750 50  0001 C CNN
+	1    3400 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5C2D1AA3
+P 3550 4300
+F 0 "C?" V 3400 4250 50  0000 L CNN
+F 1 "0.1 uF" V 3700 4250 50  0000 L CNN
+F 2 "" H 3588 4150 50  0001 C CNN
+F 3 "" H 3550 4300 50  0001 C CNN
+	1    3550 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5C2D4374
+P 3800 4300
+F 0 "#PWR?" H 3800 4050 50  0001 C CNN
+F 1 "GND" V 3800 4100 50  0000 C CNN
+F 2 "" H 3800 4300 50  0001 C CNN
+F 3 "" H 3800 4300 50  0001 C CNN
+	1    3800 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L D D3
+U 1 1 5C2D56F4
+P 4450 5300
+F 0 "D3" H 4450 5400 50  0000 C CNN
+F 1 "D" H 4450 5200 50  0001 C CNN
+F 2 "" H 4450 5300 50  0001 C CNN
+F 3 "" H 4450 5300 50  0001 C CNN
+	1    4450 5300
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	1800 2700 1800 3100
 Connection ~ 1800 2800
@@ -347,50 +411,6 @@ Wire Wire Line
 	1800 2300 1800 2400
 Wire Wire Line
 	3200 2300 3200 2400
-$Comp
-L 4017 U?
-U 1 1 5C2CD972
-P 5050 4650
-F 0 "U?" H 4950 4500 50  0000 C CNN
-F 1 "4017" H 4950 4350 50  0000 C CNN
-F 2 "" H 5050 4650 60  0001 C CNN
-F 3 "" H 5050 4650 60  0001 C CNN
-	1    5050 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L 40106 U?
-U 4 1 5C2D0466
-P 2900 4800
-F 0 "U?" H 3000 4950 50  0000 L CNN
-F 1 "40106" H 2950 4650 50  0000 L CNN
-F 2 "" H 2900 4800 60  0001 C CNN
-F 3 "" H 2900 4800 60  0001 C CNN
-	4    2900 4800
-	0    1    1    0   
-$EndComp
-$Comp
-L R_Variable R?
-U 1 1 5C2D157A
-P 3400 4750
-F 0 "R?" V 3500 4650 50  0000 L CNN
-F 1 "R_Variable" V 3300 4700 50  0000 L CNN
-F 2 "" V 3330 4750 50  0001 C CNN
-F 3 "" H 3400 4750 50  0001 C CNN
-	1    3400 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C?
-U 1 1 5C2D1AA3
-P 3550 4300
-F 0 "C?" V 3400 4250 50  0000 L CNN
-F 1 "0.1 uF" V 3700 4250 50  0000 L CNN
-F 2 "" H 3588 4150 50  0001 C CNN
-F 3 "" H 3550 4300 50  0001 C CNN
-	1    3550 4300
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	2900 4300 3400 4300
 Wire Wire Line
@@ -400,37 +420,25 @@ Wire Wire Line
 Wire Wire Line
 	2900 5300 4300 5300
 Connection ~ 3400 5300
-$Comp
-L GND #PWR?
-U 1 1 5C2D4374
-P 3800 4300
-F 0 "#PWR?" H 3800 4050 50  0001 C CNN
-F 1 "GND" V 3800 4100 50  0000 C CNN
-F 2 "" H 3800 4300 50  0001 C CNN
-F 3 "" H 3800 4300 50  0001 C CNN
-	1    3800 4300
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	4200 5300 4200 4100
 Wire Wire Line
 	4200 4100 4400 4100
 Wire Wire Line
 	3800 4300 3700 4300
-$Comp
-L D D3
-U 1 1 5C2D56F4
-P 4450 5300
-F 0 "D3" H 4450 5400 50  0000 C CNN
-F 1 "D" H 4450 5200 50  0001 C CNN
-F 2 "" H 4450 5300 50  0001 C CNN
-F 3 "" H 4450 5300 50  0001 C CNN
-	1    4450 5300
-	1    0    0    -1  
-$EndComp
 Connection ~ 4200 5300
 Wire Wire Line
 	4600 5300 5700 5300
 Wire Wire Line
 	5700 5300 5700 5200
+Wire Notes Line
+	500  550  500  4000
+Wire Notes Line
+	500  4000 4450 4000
+Wire Notes Line
+	4450 4000 4450 550 
+Wire Notes Line
+	4450 550  500  550 
+Text Notes 550  650  0    60   ~ 12
+Timbre + Audio Oscillators
 $EndSCHEMATC
