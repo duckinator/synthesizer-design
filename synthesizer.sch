@@ -236,12 +236,12 @@ $Comp
 L SW_SPDT SW?
 U 1 1 5C2C2D51
 P 3700 3700
-F 0 "SW?" H 3600 3850 50  0000 C CNN
-F 1 "Osc2 Triangle/Square" H 3600 3950 50  0000 C CNN
+F 0 "SW?" H 3600 3550 50  0000 C CNN
+F 1 "Osc2 Triangle/Square" H 3650 3450 50  0000 C CNN
 F 2 "" H 3700 3700 50  0001 C CNN
 F 3 "" H 3700 3700 50  0001 C CNN
 	1    3700 3700
-	-1   0    0    1   
+	-1   0    0    -1  
 $EndComp
 Text GLabel 1700 1200 0    60   Input ~ 0
 Timbre1VarResA
